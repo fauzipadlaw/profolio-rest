@@ -1,6 +1,7 @@
 module Api
   module V1
     class ProjectsController < ApplicationController
+      before_action :authorize_access_request!
       before_action :set_project, only: [:show, :update, :destroy]
 
       # GET /projects

@@ -1,6 +1,7 @@
 module Api
   module V1
     class TechnologiesController < ApplicationController
+      before_action :authorize_access_request!
       before_action :set_technology, only: [:show, :update, :destroy]
 
       # GET /technologies
